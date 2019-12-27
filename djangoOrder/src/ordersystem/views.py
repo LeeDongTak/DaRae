@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from ordersystem.forms import *
 from ordersystem.models import Destination
 
+
 # Create your views here.
 def postal(request):
     if request.method == 'POST':

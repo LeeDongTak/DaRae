@@ -131,7 +131,7 @@
 
                                 // lastPage변수가 currentPage 변수보다 클때만
                                 // 다음 버튼이 활성화 되도록 함
-                                if ($currentPage < $lastPage) {
+                                if ($currentPage <= $lastPage) {
                                     // 다음 버튼이 클릭될때 GET방식으로 currentPage변수 값에
                                     // 1을 더한 값이 넘어가도록 함
                                     echo "<a class='page_btn' 

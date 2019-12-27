@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.apache.org/dtd/mybatis-3-config.dtd"> 
+<configuration> 
+   <typeAliases>
+   	<typeAlias type="com.ldt.dto.HomeBook" alias="homebook"/>
+   	<typeAlias type="com.ldt.dto.BMember" alias="bmember"/>
+   	<typeAlias type="com.ldt.dto.Board" alias="board"/>
+   	<typeAlias type="com.ldt.dto.TotalVO" alias="totalvo"/>
+   </typeAliases>
+   
+   <environments default = "development">
+      <environment id = "development">
+         <transactionManager type = "JDBC"/>  
+            <dataSource type = "POOLED">
+               <property name = "driver" value = "oracle.jdbc.driver.OracleDriver"/>
+               <property name = "url" value = "jdbc:oracle:thin:@127.0.0.1:1521:xe"/>
+               <property name = "username" value = "board"/>
+               <property name = "password" value = "java"/>
+            </dataSource>        
+      </environment>
+   </environments>
+	
+   <mappers>
+      <mapper resource = "com/ldt/mapper/HomeBook.xml"/>
+      <mapper resource = "com/ldt/mapper/BMember.xml"/>
+      <mapper resource = "com/ldt/mapper/Board.xml"/>
+      <mapper resource = "com/ldt/mapper/Service.xml"/>
+   </mappers>
+   
+</configuration>
